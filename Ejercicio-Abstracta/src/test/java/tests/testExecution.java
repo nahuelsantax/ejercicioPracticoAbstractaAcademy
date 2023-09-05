@@ -56,7 +56,6 @@ public class testExecution {
     public void validarProductoEnCarrito() {
         paginaDelCarrito carrito = new paginaDelCarrito(driver);
 
-        // Verifica que el iPhone esté en el carrito.
         boolean productoEnCarrito = carrito.validarProductoEnCarrito("iPhone");
         Assert.assertTrue(productoEnCarrito, "El producto iPhone no se encuentra en el carrito.");
         takeScreenshot("Paso4_ValidarCarrito");
@@ -75,7 +74,6 @@ public class testExecution {
     public void validarProductoNoEnCarrito() {
         paginaDelCarrito carrito = new paginaDelCarrito(driver);
 
-        // Verifica que el iPhone ya no esté en el carrito.
         boolean productoNoEnCarrito = carrito.validarProductoNoEnCarrito("iPhone");
         Assert.assertTrue(productoNoEnCarrito, "El producto iPhone todavía se encuentra en el carrito.");
         takeScreenshot("Paso6_ValidarProductoNoEnCarrito");
@@ -86,7 +84,6 @@ public class testExecution {
         driver.close();
     }
 
-    // Método para capturar capturas de pantalla
     public void takeScreenshot(String screenshotName) {
         try {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
