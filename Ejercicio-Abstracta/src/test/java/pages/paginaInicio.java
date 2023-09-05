@@ -12,20 +12,17 @@ public class paginaInicio {
     WebDriver driver;
     WebDriverWait wait;
 
-    // Constructor
     public paginaInicio(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Espera implícita con un tiempo de espera de 10 segundos.
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
     }
 
-    // Agrega un método para ingresar una palabra en el campo de búsqueda.
     public void escribirPalabra(String palabra) {
         WebElement campoBusqueda = driver.findElement(By.name("search"));
         campoBusqueda.sendKeys(palabra);
     }
 
-    // Agrega un método para realizar una búsqueda.
     public void hacerBusqueda() {
         WebElement botonBuscar = driver.findElement(By.cssSelector(".input-group-btn button"));
         botonBuscar.click();
