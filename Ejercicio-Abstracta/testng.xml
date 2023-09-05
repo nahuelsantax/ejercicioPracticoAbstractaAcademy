@@ -3,8 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+
+      // *** TENGO QUE AGREGAR SUIT Y TEST PARA QUE QUEDE MAS PROLIJO***
       <class name="Edit.Ejercicio_Abstracta.AppTest"/>
       <class name="tests.testExecution"/>
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test> 
+</suite> 
